@@ -1,0 +1,2634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOMBUTECH EAST AFRICA</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #070913;
+            --bg-card-dark: #0f1322;
+            --primary-purple: #6352ff;
+            --primary-blue: #3b82f6;
+            --accent-glow: #8b5cf6;
+            --text-main: #0d1117;
+            --text-muted: #6b7280;
+            --card-bg-light: #f4f5f9;
+            --card-inner-light: #ffffff;
+            --border-color: #e5e7eb;
+            --radius-lg: 20px;
+            --radius-sm: 10px;
+
+            /* Pricing Specific Variables */
+            --gradient-btn: linear-gradient(90deg, #3b82f6 0%, #6352ff 100%);
+            --text-dark-pricing: #0f172a;
+            --card-shadow-pricing: 0 20px 40px rgba(99, 82, 255, 0.05);
+            --border-purple: #4f46e5;
+            --radius-pill: 50px;
+
+            /* Embedded Jobs Variables */
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --primary-light: #eef2ff;
+            --secondary-bg: #f8fafc;
+            --text-dark: #0f172a;
+            --card-bg: #ffffff;
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(79, 70, 229, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #fcfcfd;
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+        }
+
+        .page-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 0 50px rgba(0,0,0,0.05);
+        }
+
+        /* --- HERO SECTION & HEADER --- */
+        .hero-wrapper {
+            background: radial-gradient(circle at 75% 30%, #1a1b4b 0%, #080a14 60%);
+            color: #ffffff;
+            padding: 20px 40px 40px;
+            border-radius: 0 0 24px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Header / Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+        }
+
+        .logo i {
+            color: var(--primary-purple);
+            font-size: 24px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #a1a1aa;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a.active, .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background: var(--primary-purple);
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .btn-shop-nav {
+            background: var(--primary-purple);
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-shop-nav:hover {
+            background: #4f3df0;
+            box-shadow: 0 0 15px rgba(99, 82, 255, 0.4);
+        }
+
+        .btn-useful-links {
+            background: #ef4444;
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-useful-links:hover {
+            background: #dc2626;
+            box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+        }
+
+        /* --- NEW ANIMATED TICKER NAVBAR STYLING --- */
+        .ticker-navbar {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.04);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            padding: 12px 0;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            border-radius: 12px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ticker-track {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marqueeTicker 25s linear infinite;
+        }
+
+        .ticker-track:hover {
+            animation-play-state: paused;
+        }
+
+        .ticker-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-right: 40px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff, #54a0ff, #5f27cd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .ticker-item i {
+            -webkit-text-fill-color: initial;
+            color: #38bdf8;
+        }
+
+        @keyframes marqueeTicker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Hero Main Content */
+        .hero-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding: 60px 0 30px;
+            gap: 40px;
+        }
+
+        .hero-text h1 {
+            font-size: 52px;
+            line-height: 1.15;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 span {
+            background: linear-gradient(90deg, #60a5fa, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-text p {
+            color: #9ca3af;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 35px;
+            max-width: 440px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--primary-purple);
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        /* --- GREEN ONLINE TAB STYLING --- */
+        .btn-online {
+            background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-online:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+        }
+
+        .online-dot {
+            width: 9px;
+            height: 9px;
+            background-color: #34d399;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px #34d399;
+            animation: pulse-online 1.8s infinite;
+        }
+
+        @keyframes pulse-online {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
+            70% { transform: scale(1.15); box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Hero Image Glow Effects & Book Page Flip Animation Styles */
+        .hero-image-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1200px;
+            min-height: 380px;
+        }
+
+        .glow-circle {
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            border: 2px solid #38bdf8;
+            box-shadow: 0 0 50px rgba(56, 189, 248, 0.3), inset 0 0 30px rgba(168, 85, 247, 0.3);
+            z-index: 1;
+        }
+
+        /* Book page container and items */
+        .book-slider-container {
+            position: relative;
+            width: 380px;
+            height: 380px;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-style: preserve-3d;
+        }
+
+        .book-slide-item {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: transform 1.2s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 1.2s ease-in-out;
+            transform: translateX(60px) scale(0.85) rotateY(-25deg);
+            transform-origin: left center;
+        }
+
+        .book-slide-item.active {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateX(0) scale(1) rotateY(0deg);
+            z-index: 10;
+        }
+
+        .book-slide-item.prev {
+            opacity: 0.4;
+            transform: translateX(-70px) scale(0.8) rotateY(35deg);
+            z-index: 5;
+            filter: brightness(0.6);
+        }
+
+        .hero-img {
+            width: 380px;
+            max-height: 380px;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.7));
+            position: relative;
+            border-radius: 16px;
+        }
+
+        /* Animated Headline Flip Container */
+        .animated-headline-container {
+            position: relative;
+            min-height: 125px;
+            margin-bottom: 20px;
+            perspective: 1000px;
+        }
+
+        .headline-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(25px) rotateX(-15deg);
+            transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 1s ease-in-out;
+            pointer-events: none;
+        }
+
+        .headline-slide.active {
+            opacity: 1;
+            transform: translateY(0) rotateX(0deg);
+            pointer-events: auto;
+            position: relative;
+        }
+
+        .headline-slide.prev {
+            opacity: 0;
+            transform: translateY(-25px) rotateX(15deg);
+        }
+
+        /* Features Bar */
+        .features-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 25px 20px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            gap: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .feature-item i {
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .feature-item div h4 {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .feature-item div p {
+            font-size: 11px;
+            color: #9ca3af;
+        }
+
+        /* --- SECTION COMMONS --- */
+        .section-padding {
+            padding: 60px 40px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 8px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: 0.3s;
+            cursor: pointer;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--text-main);
+            color: #fff;
+        }
+
+        /* --- FEATURED PRODUCTS --- */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
+            background: #f7f8fc;
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            position: relative;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .badge.bestseller { background: #6352ff; }
+        .badge.trending { background: #7c3aed; }
+        .badge.new { background: #4f46e5; }
+        .badge.sale { background: #ef4444; }
+
+        .product-img-box {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .product-img-box img {
+            max-height: 160px;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .product-cat {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .product-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            color: #f59e0b;
+            margin-bottom: 15px;
+        }
+
+        .product-rating span {
+            color: var(--text-muted);
+            font-size: 11px;
+            margin-left: 4px;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 16px;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .btn-cart {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--primary-purple);
+            color: #fff;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-cart:hover {
+            transform: scale(1.1);
+        }
+
+        .extra-products-container {
+            display: none;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 25px;
+            animation: fadeInGrid 0.5s ease forwards;
+        }
+
+        @keyframes fadeInGrid {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- PRICING SECTION STYLES --- */
+        .pricing-section-container {
+            padding: 60px 40px;
+            position: relative;
+        }
+
+        .pricing-header {
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        .badge-pill {
+            background: #e0e7ff;
+            color: #4338ca;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            padding: 8px 18px;
+            border-radius: var(--radius-pill);
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .pricing-header h1 {
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--text-dark-pricing);
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+
+        .pricing-header p {
+            color: var(--text-muted);
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            align-items: center;
+        }
+
+        .pricing-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 40px 32px 32px;
+            box-shadow: var(--card-shadow-pricing);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            position: relative;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(99, 82, 255, 0.15);
+        }
+
+        .pricing-card.popular {
+            border: 2px solid var(--border-purple);
+            box-shadow: 0 25px 50px rgba(99, 82, 255, 0.12);
+            padding-top: 50px;
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-btn);
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 8px 20px;
+            border-radius: var(--radius-pill);
+            box-shadow: 0 4px 10px rgba(99, 82, 255, 0.3);
+        }
+
+        .card-title {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--text-dark-pricing);
+            margin-bottom: 24px;
+        }
+
+        .card-price {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: 800;
+            color: #2563eb;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .card-price .currency {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 4px;
+            margin-right: 4px;
+        }
+
+        .price-period {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-bottom: 32px;
+        }
+
+        .features-list {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 36px;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            color: #475569;
+            font-weight: 500;
+            padding: 10px 0;
+            border-bottom: 1px dotted #f1f5f9;
+        }
+
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+
+        .icon-check {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #dcfce7;
+            color: #16a34a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            flex-shrink: 0;
+        }
+
+        .icon-cross {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #fee2e2;
+            color: #ef4444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            flex-shrink: 0;
+        }
+
+        .btn-card {
+            width: 100%;
+            background: var(--gradient-btn);
+            color: #ffffff;
+            border: none;
+            padding: 14px 0;
+            border-radius: var(--radius-pill);
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(99, 82, 255, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .btn-card:hover {
+            box-shadow: 0 6px 20px rgba(99, 82, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* --- SHOP BY CATEGORY --- */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .category-card {
+            background: #f7f8fc;
+            border-radius: var(--radius-lg);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            height: 240px;
+        }
+
+        .category-info h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .category-info p {
+            font-size: 12px;
+            color: var(--text-muted);
+            max-width: 150px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .cat-link {
+            color: var(--primary-purple);
+            font-size: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .cat-img {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            width: 130px;
+            height: 130px;
+            object-fit: contain;
+        }
+
+        /* --- WORK PROCESS / JOBS SECTION STYLES --- */
+        .process-section {
+            padding: 5rem 40px 3rem 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .badge-jobs {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.2rem;
+        }
+
+        .section-title-jobs {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            max-width: 600px;
+            margin: 0 auto 4rem auto;
+            line-height: 1.25;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+            position: relative;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .cards-container::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 8%;
+            right: 8%;
+            height: 2px;
+            background: #e2e8f0;
+            z-index: 1;
+            transform: translateY(-50%);
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 2.5rem 1.25rem 2rem 1.25rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .card.active {
+            border: 1.5px solid var(--primary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -18px;
+            width: 36px;
+            height: 36px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 10px rgba(79, 70, 229, 0.4);
+        }
+
+        .icon-wrapper {
+            width: 64px;
+            height: 64px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .card.active .icon-wrapper,
+        .card:hover .icon-wrapper {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Jobs Pop-Up Modal */
+        .jobs-modal-box {
+            background: white;
+            width: 100%;
+            max-width: 580px;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            position: relative;
+            transform: scale(0.9);
+            transition: all 0.3s ease;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            color: var(--text-dark);
+        }
+
+        .modal-overlay.active .jobs-modal-box {
+            transform: scale(1);
+        }
+
+        .modal-img-wrapper {
+            width: 100%;
+            height: 190px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .modal-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-step-tag {
+            position: absolute;
+            bottom: 1rem;
+            left: 1.5rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-body-jobs {
+            padding: 1.75rem 2rem 2rem 2rem;
+            overflow-y: auto;
+            text-align: left;
+        }
+
+        .modal-title-jobs {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-description-jobs {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-box {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .pricing-info p {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pricing-info .price-tag {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .pricing-info .price-tag span {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .jobs-features-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .jobs-features-list li {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .jobs-features-list li i {
+            color: #22c55e;
+            font-size: 0.9rem;
+        }
+
+        .btn-whatsapp-jobs {
+            background: #25d366;
+            color: white;
+            width: 100%;
+            padding: 0.95rem 1.5rem;
+            border-radius: 14px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-whatsapp-jobs:hover {
+            background: #1da851;
+            transform: translateY(-2px);
+        }
+
+        /* --- WHY SHOP WITH US --- */
+        .why-us-section {
+            padding: 0 40px 60px;
+        }
+
+        .why-us-box {
+            background: #0a0d1d;
+            border-radius: var(--radius-lg);
+            padding: 30px 40px;
+            color: #fff;
+        }
+
+        .why-us-title {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .why-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .why-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #1e2540;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #6352ff;
+            flex-shrink: 0;
+        }
+
+        .why-text h4 {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .why-text p {
+            font-size: 12px;
+            color: #9ca3af;
+            line-height: 1.3;
+        }
+
+        /* --- FIND US SECTION --- */
+        .find-us-section {
+            padding: 60px 40px;
+            background: #f4f5f9;
+            border-radius: var(--radius-lg);
+            margin: 0 40px 40px;
+            text-align: center;
+        }
+
+        .find-us-section h2 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .find-us-section p {
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-card-link {
+            background: #ffffff;
+            padding: 20px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: var(--text-dark-pricing);
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .contact-card-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(99, 82, 255, 0.15);
+        }
+
+        .contact-card-link i {
+            font-size: 24px;
+            color: var(--primary-purple);
+        }
+
+        /* --- FOOTER STYLES --- */
+        .site-footer {
+            background: radial-gradient(circle at 75% 30%, #1a1b4b 0%, #080a14 60%);
+            color: #ffffff;
+            padding: 40px 40px 20px;
+            border-radius: 24px 24px 0 0;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-left h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .footer-left p, .footer-left a {
+            color: #9ca3af;
+            font-size: 14px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-left a:hover {
+            color: #60a5fa;
+        }
+
+        .social-handles {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-icon:hover {
+            background: var(--primary-purple);
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(99, 82, 255, 0.4);
+        }
+
+        .copyright-bar {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 13px;
+            color: #9ca3af;
+        }
+
+        /* --- POPUP MODAL STYLES --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(7, 9, 19, 0.8);
+            backdrop-filter: blur(5px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-card {
+            background: radial-gradient(circle at 100% 0%, #1f2438 0%, #0f1322 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            width: 100%;
+            max-width: 600px;
+            padding: 30px;
+            color: #fff;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            animation: modalPop 0.3s ease-out forwards;
+        }
+
+        @keyframes modalPop {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 24px;
+            color: #9ca3af;
+            cursor: pointer;
+            transition: 0.2s;
+            z-index: 10;
+        }
+
+        .modal-close:hover {
+            color: #fff;
+        }
+
+        .modal-body {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .modal-details h3 {
+            font-size: 24px;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .modal-details p {
+            font-size: 14px;
+            color: #9ca3af;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .modal-price-display {
+            font-size: 32px;
+            font-weight: 800;
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .pricing-modal-features {
+            list-style: none;
+            margin-bottom: 25px;
+            background: rgba(255,255,255,0.03);
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .pricing-modal-features li {
+            font-size: 14px;
+            color: #cbd5e1;
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pricing-modal-features li i {
+            color: #38bdf8;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .qty-btn {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .qty-btn:hover {
+            background: var(--primary-purple);
+        }
+
+        .qty-input {
+            width: 40px;
+            text-align: center;
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .btn-order-wa {
+            background: linear-gradient(90deg, #25D366, #128C7E);
+            color: #fff;
+            width: 100%;
+            padding: 14px;
+            border-radius: 30px;
+            border: none;
+            font-weight: 700;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .btn-order-wa:hover {
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .btn-redirect-findus {
+            background: var(--gradient-btn);
+            color: #fff;
+            width: 100%;
+            padding: 14px;
+            border-radius: 30px;
+            border: none;
+            font-weight: 700;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .btn-redirect-findus:hover {
+            box-shadow: 0 0 15px rgba(99, 82, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* FLOATING SCROLL TOP BUTTON */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--gradient-btn);
+            color: #ffffff;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(99, 82, 255, 0.4);
+            z-index: 99;
+            transition: all 0.3s ease;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .cards-container {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2.5rem 1.5rem;
+            }
+            .cards-container::before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .hero-body {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-text p {
+                margin: 0 auto 35px;
+            }
+            .hero-btns {
+                justify-content: center;
+            }
+            .products-grid, .extra-products-container, .category-grid, .why-us-grid, .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            .features-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .nav-links {
+                display: none;
+            }
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+            .section-title-jobs {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        
+        <!-- HERO SECTION -->
+        <section class="hero-wrapper">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fa-solid fa-chart-simple"></i> KOMBU TECH
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#products" class="active">Products</a></li>
+                    <li><a href="#pricing">Pricing Plans</a></li>
+                    <li><a href="#categories">About</a></li>
+                    <li><a href="#jobs">JOBS</a></li>
+                    <li><a href="#find-us">Find Us</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="cart-icon" onclick="openCart()">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </div>
+                    <a href="#products" class="btn-shop-nav">Explore Cyber</a>
+                    <a href="#find-us" class="btn-useful-links">Useful Links</a>
+                </div>
+            </nav>
+
+            <!-- NEW ANIMATED TICKER NAVBAR (PLACED BELOW NAVIGATION PANEL & ABOVE FLEXIBLE PLANS HEADLINE) -->
+            <div class="ticker-navbar">
+                <div class="ticker-track">
+                    <span class="ticker-item"><i class="fa-solid fa-bolt"></i> Welcome to Kombutech East Africa</span>
+                    <span class="ticker-item"><i class="fa-solid fa-shield-halved"></i> Your Number 1 Cyber Solutions</span>
+                    <span class="ticker-item"><i class="fa-solid fa-star"></i> Professional Web & Graphic Design</span>
+                    <span class="ticker-item"><i class="fa-solid fa-check-to-slot"></i> Fast KRA & NTSA Services</span>
+                    <span class="ticker-item"><i class="fa-solid fa-bolt"></i> Welcome to Kombutech East Africa</span>
+                    <span class="ticker-item"><i class="fa-solid fa-shield-halved"></i> Your Number 1 Catridge Seller</span>
+                    <span class="ticker-item"><i class="fa-solid fa-star"></i> Professional Web & Graphic Design</span>
+                    <span class="ticker-item"><i class="fa-solid fa-check-to-slot"></i> Fast KRA & NTSA Services</span>
+                </div>
+            </div>
+
+            <div class="hero-body">
+                <div class="hero-text">
+                    <div class="animated-headline-container" id="headlineContainer">
+                        <!-- Slide 1 (Original) -->
+                        <div class="headline-slide active">
+                            <h1>Flexible Plans for<br><span>YOUR BUSINESS NEEDS</span></h1>
+                            <p>Transparent pricing with zero hidden fees. Choose a service package tailored for startups, expanding enterprises, and digital transformation.</p>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="headline-slide">
+                            <h1>Scalable Cyber Solutions for<br><span>YOUR DIGITAL GROWTH</span></h1>
+                            <p>Get ultra-fast KRA, NTSA, and BRS processing handled securely by our expert digital support team.</p>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="headline-slide">
+                            <h1>Professional Printer Solutions for<br><span>MAXIMUM CONVERSIONS</span></h1>
+                            <p>Establish strong online authority with custom responsive websites built to scale your commercial brand.</p>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="headline-slide">
+                            <h1>Advanced Graphic Branding for<br><span>UNIQUE VISUAL IDENTITY</span></h1>
+                            <p>Stand out from the competition with stunning corporate identity materials, flyers, and multimedia graphics.</p>
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="headline-slide">
+                            <h1>Expert Document Services for<br><span>PROFESSIONAL-PERFECT PRINTINGS</span></h1>
+                            <p>Accurate CV writing, professional transcriptions, and corporate company profiles delivered on schedule.</p>
+                        </div>
+                        <!-- Slide 6 -->
+                        <div class="headline-slide">
+                            <h1>Dedicated Tech Assistance for<br><span>PEACE OF MIND</span></h1>
+                            <p>Round-the-clock priority customer support and technical guidance for all your online registration needs.</p>
+                        </div>
+                        <!-- Slide 7 -->
+                        <div class="headline-slide">
+                            <h1>Secure Catridge Solutions for<br><span>MODERN ENTERPRISES</span></h1>
+                            <p>Protect your critical business data with enterprise-grade security configurations and seamless server setups.</p>
+                        </div>
+                        <!-- Slide 8 -->
+                        <div class="headline-slide">
+                            <h1>Tailored Startup Packages for<br><span>FAST-TRACK SUCCESS</span></h1>
+                            <p>All-in-one introductory bundles designed to get your new venture up and running without breaking the bank.</p>
+                        </div>
+                        <!-- Slide 9 -->
+                        <div class="headline-slide">
+                            <h1>Strategic Marketing for<br><span>REVENUE ACCELERATION</span></h1>
+                            <p>Targeted campaigns across Google Ads and social media channels to drive high-intent paying customers.</p>
+                        </div>
+                        <!-- Slide 10 -->
+                        <div class="headline-slide">
+                            <h1>Trusted Kenyan Top Ink/Catridges/Printer Seller<br><span>AMONG TOP SEARCHED SELLERS</span></h1>
+                            <p>Effortless navigation and application support for SHA, NSSF, KUCCPS, and vital government platforms.</p>
+                        </div>
+                    </div>
+
+                    <div class="hero-btns">
+                        <a href="#products" class="btn-primary">Explore Jobs <i class="fa-solid fa-arrow-down"></i></a>
+                        <!-- NEW GREEN ONLINE TAB -->
+                        <a href="#find-us" class="btn-online"><span class="online-dot"></span> ONLINE</a>
+                        <a href="#find-us" class="btn-secondary">Contact Us</a>
+                    </div>
+                </div>
+
+                <div class="hero-image-container">
+                    <div class="glow-circle"></div>
+                    <div class="book-slider-container" id="bookSliderContainer">
+                        <!-- Image 1 (Original) -->
+                        <div class="book-slide-item active">
+                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&auto=format&fit=crop&q=80" alt="Pricing Plans" class="hero-img">
+                        </div>
+                        <!-- Image 2 -->
+                        <div class="book-slide-item">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=80" alt="Cyber Solutions" class="hero-img">
+                        </div>
+                        <!-- Image 3 -->
+                        <div class="book-slide-item">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&auto=format&fit=crop&q=80" alt="Web Development" class="hero-img">
+                        </div>
+                        <!-- Image 4 -->
+                        <div class="book-slide-item">
+                            <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=600&auto=format&fit=crop&q=80" alt="Graphic Design" class="hero-img">
+                        </div>
+                        <!-- Image 5 -->
+                        <div class="book-slide-item">
+                            <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=600&auto=format&fit=crop&q=80" alt="Transcription Services" class="hero-img">
+                        </div>
+                        <!-- Image 6 -->
+                        <div class="book-slide-item">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format&fit=crop&q=80" alt="Tech Assistance" class="hero-img">
+                        </div>
+                        <!-- Image 7 -->
+                        <div class="book-slide-item">
+                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&auto=format&fit=crop&q=80" alt="Cloud Solutions" class="hero-img">
+                        </div>
+                        <!-- Image 8 -->
+                        <div class="book-slide-item">
+                            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&auto=format&fit=crop&q=80" alt="Startup Packages" class="hero-img">
+                        </div>
+                        <!-- Image 9 -->
+                        <div class="book-slide-item">
+                            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&auto=format&fit=crop&q=80" alt="Strategic Marketing" class="hero-img">
+                        </div>
+                        <!-- Image 10 -->
+                        <div class="book-slide-item">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=80" alt="Kenyan Portal Services" class="hero-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-bar">
+                <div class="feature-item">
+                    <i class="fa-headphones fa-solid"></i>
+                    <div>
+                        <h4>Printers</h4>
+                        <p>Top Sellings</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-brands fa-bluetooth-b"></i>
+                    <div>
+                        <h4>Wireless /Wifi</h4>
+                        <p>Printers</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-battery-full"></i>
+                    <div>
+                        <h4>Long Lasting Battery</h4>
+                        <p>AC / DC Dual Connection</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <div>
+                        <h4>Kombutech East Africa</h4>
+                        <p>P.O Box 105345 – 001001 Nairobi</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. FEATURED PRODUCTS (MOVED BEFORE PRICING PLAN) -->
+        <section class="section-padding" id="products">
+            <div class="section-header">
+                <h2 class="section-title">Featured Products</h2>
+                <button class="btn-outline" id="viewAllBtn" onclick="toggleAllProducts()">
+                    <span id="viewBtnText">View All Products</span> <i class="fa-solid fa-arrow-right" id="viewBtnIcon"></i>
+                </button>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" onclick="openProductModal('1_HP_CF259A_59A', 12, 'High quality noise cancelling wireless earbuds with rich bass.', 'https://cdn.corenexis.com/f/w6Nlg0qY0GS.png')">
+                    <span class="badge bestseller">BEST SELLER</span>
+                    <div class="product-img-box">
+                        <img src="https://cdn.corenexis.com/f/w6Nlg0qY0GS.png" alt="Earbuds">
+                    </div>
+                    <div class="product-cat">HP_CF259A_59A</div>
+                    <h3 class="product-title">HP_CF259A_59A</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(320)</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="price">Ksh11500.00 KSH</span>
+                        <button class="btn-cart" onclick="event.stopPropagation(); addToCart('HP_CF259A_59A')"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" onclick="openProductModal('Pro X168A', 250, 'Over-ear professional studio quality headphones with deep acoustics.', 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge trending">TRENDING</span>
+                    <div class="product-img-box">
+                        <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=500&auto=format&fit=crop&q=80" alt="Headphones">
+                    </div>
+                    <div class="product-cat">Headphones</div>
+                    <h3 class="product-title">Pro X168A</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(210)</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="price">$250.00 USD</span>
+                        <button class="btn-cart" onclick="event.stopPropagation(); addToCart('Pro X168A')"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" onclick="openProductModal('Speaker P168A', 240, 'Portable waterproof Bluetooth speaker with 360-degree sound field.', 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge new">NEW ARRIVAL</span>
+                    <div class="product-img-box">
+                        <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500&auto=format&fit=crop&q=80" alt="Speaker">
+                    </div>
+                    <div class="product-cat">Speakers</div>
+                    <h3 class="product-title">Speaker P168A</h3>
+                    <div class="product-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(150)</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="price">$240.00 USD</span>
+                        <button class="btn-cart" onclick="event.stopPropagation(); addToCart('Speaker P168A')"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTAINER FOR 20 ADDITIONAL PRODUCTS -->
+            <div class="extra-products-container" id="extraProducts">
+                
+                <!-- 1 -->
+                <div class="product-card" onclick="openProductModal('UltraSound Pods Pro', 180, 'Immersive spatial audio with dynamic head tracking technology.', 'https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge bestseller">BEST SELLER</span>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=500&auto=format&fit=crop&q=80" alt="Pods Pro"></div>
+                    <div class="product-cat">Audio & Pods</div>
+                    <h3 class="product-title">UltraSound Pods Pro</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(185)</span></div>
+                    <div class="product-footer"><span class="price">$180.00 USD</span><button class="btn-cart" onclick="event.stopPropagation(); addToCart('UltraSound Pods Pro')"><i class="fa-solid fa-cart-shopping"></i></button></div>
+                </div>
+
+                <!-- 2 -->
+                <div class="product-card" onclick="openProductModal('AuraBass Wireless', 195, 'Deep rumble bass response designed for sports and workout enthusiasts.', 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge trending">TRENDING</span>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=80" alt="Headphones"></div>
+                    <div class="product-cat">Headphones</div>
+                    <h3 class="product-title">AuraBass Wireless</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(98)</span></div>
+                    <div class="product-footer"><span class="price">$195.00 USD</span><button class="btn-cart" onclick="event.stopPropagation(); addToCart('AuraBass Wireless')"><i class="fa-solid fa-cart-shopping"></i></button></div>
+                </div>
+
+                <!-- 3 -->
+                <div class="product-card" onclick="openProductModal('SmartWatch Elite Ultra', 310, 'Sleek design with real-time heart rate monitoring & multi-sport tracker.', 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge new">NEW</span>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop&q=80" alt="Smartwatch"></div>
+                    <div class="product-cat">Wearables</div>
+                    <h3 class="product-title">SmartWatch Elite Ultra</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(412)</span></div>
+                    <div class="product-footer"><span class="price">$310.00 USD</span><button class="btn-cart" onclick="event.stopPropagation(); addToCart('SmartWatch Elite Ultra')"><i class="fa-solid fa-cart-shopping"></i></button></div>
+                </div>
+
+                <!-- 4 -->
+                <div class="product-card" onclick="openProductModal('FastCharge MagDock', 65, '15W Rapid Wireless Charging Pad compatible with iOS and Android.', 'https://images.unsplash.com/photo-1622445268465-84024680922c?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge sale">HOT</span>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1622445268465-84024680922c?w=500&auto=format&fit=crop&q=80" alt="Charger"></div>
+                    <div class="product-cat">Accessories</div>
+                    <h3 class="product-title">FastCharge MagDock</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(230)</span></div>
+                    <div class="product-footer"><span class="price">$65.00 USD</span><button class="btn-cart" onclick="event.stopPropagation(); addToCart('FastCharge MagDock')"><i class="fa-solid fa-cart-shopping"></i></button></div>
+                </div>
+
+                <!-- 5 -->
+                <div class="product-card" onclick="openProductModal('SoundTube Party Boom', 280, 'High power output wireless outdoor speaker with LED light show.', 'https://images.unsplash.com/photo-1545454675-3531b543be5d?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge bestseller">BEST SELLER</span>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1545454675-3531b543be5d?w=500&auto=format&fit=crop&q=80" alt="Helb"></div>
+                    <div class="product-cat">Helb</div>
+                    <h3 class="product-title">SoundTube Party Boom</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(115)</span></div>
+                    <div class="product-footer"><span class="price">$280.00 USD</span><button class="btn-cart" onclick="event.stopPropagation(); addToCart('SoundTube Party Boom')"><i class="fa-solid fa-cart-shopping"></i></button></div>
+                </div>
+
+                <!-- 6 -->
+                <div class="product-card" onclick="openProductModal('NoiseCancel Max 900', 340, 'Active noise cancelling headphones featuring 40-hour continuous playback.', 'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge trending">TRENDING</span>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500&auto=format&fit=crop&q=80" alt="Headphones"></div>
+                    <div class="product-cat">Headphones</div>
+                    <h3 class="product-title">NoiseCancel Max 900</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(520)</span></div>
+                    <div class="product-footer"><span class="price">$340.00 USD</span><button class="btn-cart" onclick="event.stopPropagation(); addToCart('NoiseCancel Max 900')"><i class="fa-solid fa-cart-shopping"></i></button></div>
+                </div>
+
+                <!-- 7 -->
+                <div class="product-card" onclick="openProductModal('Smart Band Active 5', 85, 'Lightweight fitness tracker with sleep monitor and oxygen sensor.', 'https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge new">NEW</span>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=500&auto=format&fit=crop&q=80" alt="Fitness Tracker"></div>
+                    <div class="product-cat">Wearables</div>
+                    <h3 class="product-title">Smart Band Active 5</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(142)</span></div>
+                    <div class="product-footer"><span class="price">$85.00 USD</span><button class="btn-cart" onclick="event.stopPropagation(); addToCart('Smart Band Active 5')"><i class="fa-solid fa-cart-shopping"></i></button></div>
+                </div>
+
+                <!-- 8 -->
+                <div class="product-card" onclick="openProductModal('Nano TruePods', 120, 'Compact charging case with high fidelity dual drivers.', 'https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge bestseller">BEST SELLER</span>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=500&auto=format&fit=crop&q=80" alt="TruePods"></div>
+                    <div class="product-cat">Earbuds</div>
+                    <h3 class="product-title">Nano TruePods</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(290)</span></div>
+                    <div class="product-footer"><span class="price">$120.00 USD</span><button class="btn-cart" onclick="event.stopPropagation(); addToCart('Nano TruePods')"><i class="fa-solid fa-cart-shopping"></i></button></div>
+                </div>
+
+                <!-- 9 -->
+                <div class="product-card" onclick="openProductModal('PowerBank Pro 20,000mAh', 95, 'High capacity portable power bank with Dual USB-C fast charging.', 'https://images.unsplash.com/photo-1609592424074-95d8523c91d4?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge sale">SALE</span>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1609592424074-95d8523c91d4?w=500&auto=format&fit=crop&q=80" alt="Powerbank"></div>
+                    <div class="product-cat">Accessories</div>
+                    <h3 class="product-title">PowerBank Pro 20,000mAh</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(410)</span></div>
+                    <div class="product-footer"><span class="price">$95.00 USD</span><button class="btn-cart" onclick="event.stopPropagation(); addToCart('PowerBank Pro 20,000mAh')"><i class="fa-solid fa-cart-shopping"></i></button></div>
+                </div>
+
+                <!-- 10 -->
+                <div class="product-card" onclick="openProductModal('VibeSound Desk Speaker', 145, 'Desktop stereo speaker system with custom adjustable EQ dial.', 'https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge trending">TRENDING</span>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?w=500&auto=format&fit=crop&q=80" alt="Desk Speaker"></div>
+                    <div class="product-cat">Helb</div>
+                    <h3 class="product-title">VibeSound Desk Speaker</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(85)</span></div>
+                    <div class="product-footer"><span class="price">$145.00 USD</span><button class="btn-cart" onclick="event.stopPropagation(); addToCart('VibeSound Desk Speaker')"><i class="fa-solid fa-cart-shopping"></i></button></div>
+                </div>
+
+                <!-- 11 -->
+                <div class="product-card" onclick="openProductModal('GamerHeadset RGB Zero', 210, '7.1 Surround Sound gaming headset with noise-canceling mic.', 'https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge bestseller">BEST SELLER</span>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=500&auto=format&fit=crop&q=80" alt="Gaming Headset"></div>
+                    <div class="product-cat">Gaming</div>
+                    <h3 class="product-title">GamerHeadset RGB Zero</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(630)</span></div>
+                    <div class="product-footer"><span class="price">$210.00 USD</span><button class="btn-cart" onclick="event.stopPropagation(); addToCart('GamerHeadset RGB Zero')"><i class="fa-solid fa-cart-shopping"></i></button></div>
+                </div>
+
+                <!-- 12 -->
+                <div class="product-card" onclick="openProductModal('StudioMonitor Air Pro', 290, 'Flat response audio studio headset designed for mixing engineers.', 'https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge trending">TRENDING</span>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500&auto=format&fit=crop&q=80" alt="Studio Headphones"></div>
+                    <div class="product-cat">Headphones</div>
+                    <h3 class="product-title">StudioMonitor Air Pro</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(190)</span></div>
+                    <div class="product-footer"><span class="price">$290.00 USD</span><button class="btn-cart" onclick="event.stopPropagation(); addToCart('StudioMonitor Air Pro')"><i class="fa-solid fa-cart-shopping"></i></button></div>
+                </div>
+
+                <!-- 13 -->
+                <div class="product-card" onclick="openProductModal('CarCharger Turbo Dual', 45, 'Ultra fast aluminum car charger socket with Voltage LED display.', 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge new">NEW</span>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500&auto=format&fit=crop&q=80" alt="Car Charger"></div>
+                    <div class="product-cat">Accessories</div>
+                    <h3 class="product-title">CarCharger Turbo Dual</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(76)</span></div>
+                    <div class="product-footer"><span class="price">$45.00 USD</span><button class="btn-cart" onclick="event.stopPropagation(); addToCart('CarCharger Turbo Dual')"><i class="fa-solid fa-cart-shopping"></i></button></div>
+                </div>
+
+                <!-- 14 -->
+                <div class="product-card" onclick="openProductModal('AudioHub Pro Interface', 230, 'Multi-channel audio interface box with zero-latency monitoring.', 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge bestseller">BEST SELLER</span>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=500&auto=format&fit=crop&q=80" alt="Audio Hub"></div>
+                    <div class="product-cat">Audio Gear</div>
+                    <h3 class="product-title">AudioHub Pro Interface</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(312)</span></div>
+                    <div class="product-footer"><span class="price">$230.00 USD</span><button class="btn-cart" onclick="event.stopPropagation(); addToCart('AudioHub Pro Interface')"><i class="fa-solid fa-cart-shopping"></i></button></div>
+                </div>
+
+                <!-- 15 -->
+                <div class="product-card" onclick="openProductModal('PocketSound Mini', 75, 'Ultra portable palm-sized Bluetooth speaker with integrated carabiner.', 'https://images.unsplash.com/photo-1589256469067-ea99122bbdc4?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge sale">HOT</span>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1589256469067-ea99122bbdc4?w=500&auto=format&fit=crop&q=80" alt="Mini Speaker"></div>
+                    <div class="product-cat">HELB</div>
+                    <h3 class="product-title">PocketSound Mini</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(204)</span></div>
+                    <div class="product-footer"><span class="price">$75.00 USD</span><button class="btn-cart" onclick="event.stopPropagation(); addToCart('PocketSound Mini')"><i class="fa-solid fa-cart-shopping"></i></button></div>
+                </div>
+
+                <!-- 16 -->
+                <div class="product-card" onclick="openProductModal('SportsFit EarHook', 135, 'Sweatproof behind-the-ear secure wireless earphones for running.', 'https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge trending">TRENDING</span>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?w=500&auto=format&fit=crop&q=80" alt="Sports Earphones"></div>
+                    <div class="product-cat">Earbuds</div>
+                    <h3 class="product-title">SportsFit EarHook</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(165)</span></div>
+                    <div class="product-footer"><span class="price">$135.00 USD</span><button class="btn-cart" onclick="event.stopPropagation(); addToCart('SportsFit EarHook')"><i class="fa-solid fa-cart-shopping"></i></button></div>
+                </div>
+
+                <!-- 17 -->
+                <div class="product-card" onclick="openProductModal('SmartDesk Mat Charging', 110, 'Full size desk pad with built-in fast Qi wireless charging zone.', 'https://images.unsplash.com/photo-1616440342855-08104523528b?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge new">NEW</span>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1616440342855-08104523528b?w=500&auto=format&fit=crop&q=80" alt="Desk Charger Mat"></div>
+                    <div class="product-cat">Accessories</div>
+                    <h3 class="product-title">SmartDesk Mat Charging</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(90)</span></div>
+                    <div class="product-footer"><span class="price">$110.00 USD</span><button class="btn-cart" onclick="event.stopPropagation(); addToCart('SmartDesk Mat Charging')"><i class="fa-solid fa-cart-shopping"></i></button></div>
+                </div>
+
+                <!-- 18 -->
+                <div class="product-card" onclick="openProductModal('AuraSound Tower S', 420, 'Floor standing high-resolution audio tower speaker set.', 'https://images.unsplash.com/photo-1543512214-318c7553f230?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge bestseller">BEST SELLER</span>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1543512214-318c7553f230?w=500&auto=format&fit=crop&q=80" alt="Tower Speaker"></div>
+                    <div class="product-cat">Speakers</div>
+                    <h3 class="product-title">AuraSound Tower S</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(340)</span></div>
+                    <div class="product-footer"><span class="price">$420.00 USD</span><button class="btn-cart" onclick="event.stopPropagation(); addToCart('AuraSound Tower S')"><i class="fa-solid fa-cart-shopping"></i></button></div>
+                </div>
+
+                <!-- 19 -->
+                <div class="product-card" onclick="openProductModal('Tactical SmartWatch X', 260, 'Rugged military grade waterproof GPS smartwatch.', 'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge trending">TRENDING</span>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=500&auto=format&fit=crop&q=80" alt="Tactical Watch"></div>
+                    <div class="product-cat">Wearables</div>
+                    <h3 class="product-title">Tactical SmartWatch X</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(215)</span></div>
+                    <div class="product-footer"><span class="price">$260.00 USD</span><button class="btn-cart" onclick="event.stopPropagation(); addToCart('Tactical SmartWatch X')"><i class="fa-solid fa-cart-shopping"></i></button></div>
+                </div>
+
+                <!-- 20 -->
+                <div class="product-card" onclick="openProductModal('HiFi Cable Gold Series', 40, 'Braided gold-plated audiophile 3.5mm AUX jack cable.', 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&auto=format&fit=crop&q=80')">
+                    <span class="badge sale">SALE</span>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&auto=format&fit=crop&q=80" alt="Audio Cable"></div>
+                    <div class="product-cat">Accessories</div>
+                    <h3 class="product-title">HiFi Cable Gold Series</h3>
+                    <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(510)</span></div>
+                    <div class="product-footer"><span class="price">$40.00 USD</span><button class="btn-cart" onclick="event.stopPropagation(); addToCart('HiFi Cable Gold Series')"><i class="fa-solid fa-cart-shopping"></i></button></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. PRICING PLAN SECTION (PLACED BELOW FEATURED PRODUCTS) -->
+        <section class="pricing-section-container" id="pricing">
+            <div class="pricing-header">
+                <span class="badge-pill">PRICING PLAN</span>
+                <h1>Choose The Perfect Plan</h1>
+                <p>Flexible pricing designed for startups, growing businesses, and enterprise companies.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Starter Plan -->
+                <div class="pricing-card" onclick="openPricingModal('Available Inks', 'Ksh 1,200 /Bottle', ['Cyan', 'Magenta', 'Black', 'Yellow'], 'Other')">
+                    <h3 class="card-title">INK</h3>
+                    <div class="card-price">
+                        <span class="currency">Ksh</span>1,200
+                    </div>
+                    <div class="price-period">/Btl</div>
+
+                    <ul class="features-list">
+                        <li>
+                            <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                            EPson Inks
+                        </li>
+                        <li>
+                            <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                            Brother Inks
+                        </li>
+                        <li>
+                            <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                            Canon Inks
+                        </li>
+                        <li>
+                            <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                            Hp Inks
+                        </li>
+                        <li>
+                            <span class="icon-cross"><i class="fa-solid fa-xmark"></i></span>
+                            Heavy Duty
+                        </li>
+                    </ul>
+
+                    <button class="btn-card" onclick="event.stopPropagation(); openPricingModal('INK Plan', 'Ksh 1250 /BOTTLE', ['MAGENTA', 'CYAN', 'BLACK', 'YELLOW'], 'Get Started')">Get Started</button>
+                </div>
+
+                <!-- Printers Plan (Popular) -->
+                <div class="pricing-card popular" onclick="openPricingModal('Professional Plan', 'Ksh 15,000 /Average', ['Epson L3250', 'Canon TS 3340/3440', 'Brother TS310', 'HP Desk Jet 2710', '24×7 Support'], 'Choose Plan')">
+                    <span class="popular-badge">MOST POPULAR PRINTERS</span>
+                    <h3 class="card-title">Printers</h3>
+                    <div class="card-price">
+                        <span class="currency">Ksh</span>15,000
+                    </div>
+                    <div class="price-period">/Average</div>
+
+                    <ul class="features-list">
+                        <li>
+                            <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                            Epson EcoTank Series
+                        </li>
+                        <li>
+                            <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                            HP Smart Tank & LaserJet Series
+                        </li>
+                        <li>
+                            <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                            Canon PIXMA Series
+                        </li>
+                        <li>
+                            <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                            Brother HL & MFC Series
+                        </li>
+                        <li>
+                            <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                            24×7 Support
+                        </li>
+                    </ul>
+
+                    <button class="btn-card" onclick="event.stopPropagation(); openPricingModal('HP 85A (CE285A)', 'HP 107A (W1107A)', ['HP 12A (Q2612A)', 'Canon & Kyocera Series', 'HP 17A (CF217A)', 'Facebook Marketing', 'HP 410A (CF410A series'], 'Choose Plan')">Choose Plan</button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card" onclick="openPricingModal('Toners Plan', 'Ksh 16,500 /Average', ['KYOCERA TK 5370 CYAN TONER CARTRIDGE', 'HP 203A Original Toner Yellow (CF542A)', 'Genuine Kyocera TK-5370M ', 'Kyocera TK-5370Y Yellow Toner Cartridge', 'HP 107A Black Original Laser Toner Cartridge - (W1107A)'], 'Contact Us')">
+                    <h3 class="card-title">Toners</h3>
+                    <div class="card-price">
+                        <span class="currency">Ksh</span>25,000
+                    </div>
+                    <div class="price-period">/Average</div>
+
+                    <ul class="features-list">
+                        <li>
+                            <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                            Mercury Cartridges
+                        </li>
+                        <li>
+                            <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                            Hp Catridges
+                        </li>
+                        <li>
+                            <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                            Kyocera Toners
+                        </li>
+                        <li>
+                            <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                            Dedicated Manager
+                        </li>
+                        <li>
+                            <span class="icon-check"><i class="fa-solid fa-check"></i></span>
+                            Amerian ACF283A Series Toners
+                        </li>
+                    </ul>
+
+                    <button class="btn-card" onclick="event.stopPropagation(); openPricingModal('Enterprise Plan', 'Ksh 25,000 /Month', ['Everything Included', 'AI Automation', 'Unlimited Marketing', 'Dedicated Manager', 'Priority Support'], 'Contact Us')">Contact Us</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SHOP BY CATEGORY -->
+        <section class="section-padding" id="categories" style="padding-top: 0;">
+            <div class="section-header">
+                <h2 class="section-title">Description By Category</h2>
+            </div>
+
+            <div class="category-grid">
+                <!-- Cat 1 -->
+                <div class="category-card">
+                    <div class="category-info">
+                        <h3>Inks</h3>
+                        <p id="desc-INKS">Most inkjet printers use three colours of ink – cyan, magenta and yellow – graphics and images, designed to reflect typical, average real-world usage..</p>
+                        <a onclick="bookJobCategory('INKS', 'desc-sha')" class="cat-link">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1545454675-3531b543be5d?w=500&auto=format&fit=crop&q=80" class="cat-img" alt="Speakers">
+                </div>
+
+                <!-- Cat 2 -->
+                <div class="category-card">
+                    <div class="category-info">
+                        <h3>Top Selling Printers</h3>
+                        <p id="desc-nssf">The top-selling printers across major retail platforms like Amazon Best Sellers and Best Buy span three primary categories: low-cost cartridge inkjets, high-yield ink tank models, and efficient monochrome lasers.</p>
+                        <a onclick="bookJobCategory('NSSF Registration', 'desc-nssf')" class="cat-link">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500&auto=format&fit=crop&q=80" class="cat-img" alt="Accessories">
+                </div>
+
+                <!-- Cat 3 -->
+                <div class="category-card">
+                    <div class="category-info">
+                        <h3>Toners</h3>
+                        <p id="desc-Toners">Welcome to the KUCCPS Student’s Portal. Explore institutions, programmes and other information using the above menu items. To apply, you must login to the portal.</p>
+                        <a onclick="bookJobCategory('KUCCPS', 'desc-kuccps')" class="cat-link">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1622445268465-84024680922c?w=500&auto=format&fit=crop&q=80" class="cat-img" alt="Charger">
+                </div>
+            </div>
+        </section>
+
+        <!-- JOBS / WORK PROCESS SECTION -->
+        <section class="process-section" id="jobs">
+            <span class="badge-jobs">Kombtech Tech Summary Catalogue</span>
+            <h1 class="section-title-jobs">Hello, How may we assist you, Click below to view</h1>
+
+            <div class="cards-container">
+              
+              <!-- Card 01 -->
+              <div class="card" 
+                   data-step="01" 
+                   data-title="CV / RESUME" 
+                   data-price="Ksh 350"
+                   data-image="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80"
+                   data-desc="In-depth analysis of target markets, user personas, and competitive landscape positioning."
+                   data-features='["Competitor Analysis & Benchmarking", "Target Audience Profile Setup", "Market Opportunity Report"]'>
+                <div class="step-number">01</div>
+                <div class="icon-wrapper"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <h3 class="card-title">CV / RESUME WRITTING</h3>
+                <p class="card-desc">Understanding your business and audience.</p>
+              </div>
+
+              <!-- Card 02 -->
+              <div class="card" 
+                   data-step="02" 
+                   data-title="Transcription Jobs" 
+                   data-price="Ksh 450/pg"
+                   data-image="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80"
+                   data-desc="Crafting structured web architecture, content hierarchy, and complete strategic digital roadmaps."
+                   data-features='["Information Architecture & Sitemap", "UX Wireframing & Flowcharts", "Project Timeline & Milestone Plan"]'>
+                <div class="step-number">02</div>
+                <div class="icon-wrapper"><i class="fa-regular fa-lightbulb"></i></div>
+                <h3 class="card-title">Transcription</h3>
+                <p class="card-desc">Creating a powerful digital strategy.</p>
+              </div>
+
+              <!-- Card 03 (Active/Featured) -->
+              <div class="card active" 
+                   data-step="03" 
+                   data-title="Graphical Designs" 
+                   data-price="Ksh 700"
+                   data-image="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=800&q=80"
+                   data-desc="High-fidelity UI/UX visual design, interactive prototypes, design systems, and custom brand assets."
+                   data-features='["Figma Interactive Prototypes", "Responsive UI Design Systems", "Brand Color & Typography Guidelines"]'>
+                <div class="step-number">03</div>
+                <div class="icon-wrapper"><i class="fa-solid fa-brain"></i></div>
+                <h3 class="card-title">Design</h3>
+                <p class="card-desc">Crafting modern and engaging experiences.</p>
+              </div>
+
+              <!-- Card 04 -->
+              <div class="card" 
+                   data-step="04" 
+                   data-title="Web Development" 
+                   data-price="Ksh 16500"
+                   data-image="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+                   data-desc="Clean, pixel-perfect frontend and backend code implementation built with modern responsive frameworks."
+                   data-features='["Pixel-Perfect Responsive Coding", "Cross-Browser & Speed Optimization", "API & Database Integration"]'>
+                <div class="step-number">04</div>
+                <div class="icon-wrapper"><i class="fa-solid fa-code"></i></div>
+                <h3 class="card-title">Development</h3>
+                <p class="card-desc">Building scalable and responsive solutions.</p>
+              </div>
+
+              <!-- Card 05 -->
+              <div class="card" 
+                   data-step="05" 
+                   data-title="Professional Company Profiles" 
+                   data-price="Ksh 3700"
+                   data-image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+                   data-desc="Deployment, domain & SSL configuration, technical SEO setup, and ongoing performance monitoring."
+                   data-features='["Domain & Server Deployment", "Technical SEO & Analytics Setup", "30 Days Post-Launch Maintenance"]'>
+                <div class="step-number">05</div>
+                <div class="icon-wrapper"><i class="fa-solid fa-rocket"></i></div>
+                <h3 class="card-title">Company Profile Build</h3>
+                <p class="card-desc">Deploying and continuously optimizing projects.</p>
+              </div>
+
+            </div>
+        </section>
+
+        <!-- WHY SHOP WITH US -->
+        <section class="why-us-section" style="margin-top: 40px;">
+            <div class="why-us-box">
+                <h3 class="why-us-title">Why Shop With KOMBUTECH EAST AFRICA?</h3>
+                <div class="why-us-grid">
+                    <div class="why-item">
+                        <div class="why-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                        <div class="why-text">
+                            <h4>Affordable Delivery</h4>
+                            <p>Free shipping on all orders over Ksh 15,000.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon"><i class="fa-solid fa-box"></i></div>
+                        <div class="why-text">
+                            <h4>Easy Returns</h4>
+                            <p>30-day easy returns guaranteed.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon"><i class="fa-solid fa-shield-check"></i></div>
+                        <div class="why-text">
+                            <h4>Secure Warranty</h4>
+                            <p>Quality assurance with 1 year warranty.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FIND US SECTION -->
+        <section class="find-us-section" id="find-us">
+            <h2>For Bookings, Assistance, Inquiries and Support</h2>
+            <p>Ready to start your project or need personalized technical support? Reach out directly to our team.</p>
+            <div class="contact-methods">
+                <a href="https://wa.me/254710814900" target="_blank" class="contact-card-link">
+                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+                <a href="mailto:kombutecheastafrica@gmail.com" class="contact-card-link">
+                    <i class="fa-solid fa-envelope"></i> Send an Email
+                </a>
+                <a href="tel:+254" class="contact-card-link">
+                    <i class="fa-solid fa-phone"></i> +254710814900
+                </a>
+            </div>
+        </section>
+
+        <!-- FOOTER SECTION -->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3>Kombutech East Africa - Online</h3>
+                    <p>Push Email: <a href="mailto:kombutecheastafrica@gmail.com">kombutecheastafrica@gmail.com</a></p>
+                    <p>Designed by <a href="https://www.linkedin.com" target="_blank">Lawrence</a></p>
+                </div>
+                <div class="social-handles">
+                    <a href="#" class="social-icon" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/254714855695" target="_blank" class="social-icon" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="copyright-bar">
+                <p>&copy; 2026 KOMBUTECH EAST AFRICA. All Rights Reserved & Copyright Protected by Lawrence Aura (Developer)</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- PRODUCT POPUP MODAL -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal-card">
+            <span class="modal-close" onclick="closeProductModal()">&times;</span>
+            <div class="modal-body">
+                <div style="text-align: center; background: #fff; padding: 20px; border-radius: 12px; margin-bottom: 10px;">
+                    <img id="modalImg" src="" alt="Product Image" style="max-height: 180px; max-width: 100%; object-fit: contain;">
+                </div>
+                <div class="modal-details">
+                    <h3 id="modalTitle">Product Title</h3>
+                    <p id="modalDesc">Product description here...</p>
+                    
+                    <div class="quantity-control">
+                        <span>Quantity:</span>
+                        <button class="qty-btn" onclick="updateQty(-1)">-</button>
+                        <input type="text" id="modalQty" class="qty-input" value="1" readonly>
+                        <button class="qty-btn" onclick="updateQty(1)">+</button>
+                    </div>
+
+                    <div class="modal-price-display">
+                        Total Price: $<span id="modalTotalPrice">0</span> USD
+                    </div>
+
+                    <button class="btn-order-wa" onclick="sendWhatsAppOrder()">
+                        <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRICING PLAN POPUP MODAL -->
+    <div class="modal-overlay" id="pricingModal">
+        <div class="modal-card">
+            <span class="modal-close" onclick="closePricingModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-details">
+                    <h3 id="pricingModalTitle">Plan Title</h3>
+                    <div class="modal-price-display" id="pricingModalPrice">Ksh 0</div>
+                    <p>Included in this service package:</p>
+                    
+                    <ul class="pricing-modal-features" id="pricingModalFeatures">
+                        <!-- Dynamically populated -->
+                    </ul>
+
+                    <button class="btn-redirect-findus" id="pricingModalBtn" onclick="redirectToFindUs()">
+                        Proceed to Find Us Section <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JOBS POPUP MODAL -->
+    <div class="modal-overlay" id="jobsModalOverlay">
+        <div class="jobs-modal-box">
+            <span class="modal-close" id="jobsModalClose" style="color: #0d1117;"><i class="fa-solid fa-xmark"></i></span>
+            
+            <div class="modal-img-wrapper">
+                <img id="jobsModalImg" src="" alt="Service Banner">
+                <span class="modal-step-tag" id="jobsModalStepTag">Step 01</span>
+            </div>
+
+            <div class="modal-body-jobs">
+                <h2 class="modal-title-jobs" id="jobsModalTitle">Process Details</h2>
+                <p class="modal-description-jobs" id="jobsModalDescription">Detailed information about this specific phase.</p>
+                
+                <div class="pricing-box">
+                    <div class="pricing-info">
+                        <p>Estimated Investment</p>
+                        <div class="price-tag" id="jobsModalPrice">$0 <span>/ phase</span></div>
+                    </div>
+                </div>
+
+                <ul class="jobs-features-list" id="jobsModalFeatures">
+                    <!-- Features rendered dynamically -->
+                </ul>
+
+                <a href="#" id="jobsConsultBtn" target="_blank" class="btn-whatsapp-jobs">
+                    <i class="fa-brands fa-whatsapp"></i> Consult via WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FLOATING SCROLL TOP BUTTON -->
+    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- JAVASCRIPT INTERACTIVITY -->
+    <script>
+        let cartItemCount = 0;
+        let currentUnitPrice = 0;
+        let currentProductName = '';
+
+        /* Jobs Categories Book Now Function */
+        function bookJobCategory(categoryTitle, descElementId) {
+            const findUsSection = document.getElementById('find-us');
+            if (findUsSection) {
+                findUsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+            const description = document.getElementById(descElementId).innerText;
+            const message = `Hello, I want to book for: ${categoryTitle}\n\nJob Description: "${description}"`;
+            const encodedMessage = encodeURIComponent(message);
+            
+            setTimeout(() => {
+                window.open(`https://wa.me/254714855695?text=${encodedMessage}`, '_blank');
+            }, 600);
+        }
+
+        /* Toggle All Products Handler */
+        function toggleAllProducts() {
+            const extraContainer = document.getElementById('extraProducts');
+            const btnText = document.getElementById('viewBtnText');
+            const btnIcon = document.getElementById('viewBtnIcon');
+
+            if (extraContainer.style.display === 'grid') {
+                extraContainer.style.display = 'none';
+                btnText.innerText = 'View All Products';
+                btnIcon.className = 'fa-solid fa-arrow-right';
+            } else {
+                extraContainer.style.display = 'grid';
+                btnText.innerText = 'Show Less';
+                btnIcon.className = 'fa-solid fa-arrow-up';
+            }
+        }
+
+        function addToCart(productName) {
+            cartItemCount++;
+            document.getElementById('cartCount').innerText = cartItemCount;
+            
+            const toast = document.createElement('div');
+            toast.innerText = `${productName} added to cart!`;
+            toast.style.position = 'fixed';
+            toast.style.bottom = '20px';
+            toast.style.right = '20px';
+            toast.style.background = '#6352ff';
+            toast.style.color = '#fff';
+            toast.style.padding = '12px 20px';
+            toast.style.borderRadius = '8px';
+            toast.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
+            toast.style.zIndex = '1000';
+            
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.remove();
+            }, 2000);
+        }
+
+        function openCart() {
+            alert(`You have ${cartItemCount} item(s) in your shopping cart.`);
+        }
+
+        /* --- PRODUCT MODAL FUNCTIONS --- */
+        function openProductModal(name, price, description, imgSrc) {
+            currentProductName = name;
+            currentUnitPrice = price;
+            
+            document.getElementById('modalTitle').innerText = name;
+            document.getElementById('modalDesc').innerText = description;
+            document.getElementById('modalImg').src = imgSrc;
+            document.getElementById('modalQty').value = 1;
+            
+            calculateTotalPrice();
+            document.getElementById('productModal').classList.add('active');
+        }
+
+        function closeProductModal() {
+            document.getElementById('productModal').classList.remove('active');
+        }
+
+        function updateQty(change) {
+            let qtyInput = document.getElementById('modalQty');
+            let currentQty = parseInt(qtyInput.value);
+            currentQty += change;
+            
+            if (currentQty < 1) currentQty = 1;
+            
+            qtyInput.value = currentQty;
+            calculateTotalPrice();
+        }
+
+        function calculateTotalPrice() {
+            let qty = parseInt(document.getElementById('modalQty').value);
+            let total = qty * currentUnitPrice;
+            document.getElementById('modalTotalPrice').innerText = total;
+        }
+
+        function sendWhatsAppOrder() {
+            let qty = document.getElementById('modalQty').value;
+            let total = document.getElementById('modalTotalPrice').innerText;
+            
+            let message = `Hello, I would like to order:\nProduct: ${currentProductName}\nQuantity: ${qty}\nTotal Price: $${total} USD`;
+            let encodedMessage = encodeURIComponent(message);
+            
+            window.open(`https://wa.me/254714855695?text=${encodedMessage}`, '_blank');
+        }
+
+        /* --- PRICING PLAN MODAL FUNCTIONS --- */
+        function openPricingModal(title, price, featuresArray, actionText) {
+            document.getElementById('pricingModalTitle').innerText = title;
+            document.getElementById('pricingModalPrice').innerText = price;
+            
+            const featuresContainer = document.getElementById('pricingModalFeatures');
+            featuresContainer.innerHTML = '';
+            
+            featuresArray.forEach(feature => {
+                const li = document.createElement('li');
+                li.innerHTML = `<i class="fa-solid fa-check"></i> ${feature}`;
+                featuresContainer.appendChild(li);
+            });
+
+            document.getElementById('pricingModalBtn').innerText = `${actionText} → Find Us`;
+            document.getElementById('pricingModal').classList.add('active');
+        }
+
+        function closePricingModal() {
+            document.getElementById('pricingModal').classList.remove('active');
+        }
+
+        function redirectToFindUs() {
+            closePricingModal();
+            const findUsSection = document.getElementById('find-us');
+            if (findUsSection) {
+                findUsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        /* --- BOOK PAGE ROTATION & HEADLINE SLIDER SCRIPT --- */
+        const bookSlides = document.querySelectorAll('.book-slide-item');
+        const headlineSlides = document.querySelectorAll('.headline-slide');
+        let currentSlideIndex = 0;
+
+        function rotateBookAndHeadlines() {
+            // Remove active/prev classes from all slides
+            bookSlides.forEach(slide => slide.classList.remove('active', 'prev'));
+            headlineSlides.forEach(slide => slide.classList.remove('active', 'prev'));
+
+            // Calculate previous and current indices
+            const prevIndex = currentSlideIndex;
+            currentSlideIndex = (currentSlideIndex + 1) % bookSlides.length;
+
+            // Apply classes for smooth book page transition effect
+            bookSlides[prevIndex].classList.add('prev');
+            bookSlides[currentSlideIndex].classList.add('active');
+
+            headlineSlides[prevIndex].classList.add('prev');
+            headlineSlides[currentSlideIndex].classList.add('active');
+        }
+
+        // Interval set exactly to 5 seconds
+        setInterval(rotateBookAndHeadlines, 5000);
+
+        /* --- JOBS MODAL & CARD SCRIPT --- */
+        const WHATSAPP_NUMBER_JOBS = '254714855695';
+        const jobCards = document.querySelectorAll('#jobs .card');
+        const jobsModalOverlay = document.getElementById('jobsModalOverlay');
+        const jobsModalClose = document.getElementById('jobsModalClose');
+        const jobsModalImg = document.getElementById('jobsModalImg');
+        const jobsModalStepTag = document.getElementById('jobsModalStepTag');
+        const jobsModalTitle = document.getElementById('jobsModalTitle');
+        const jobsModalDescription = document.getElementById('jobsModalDescription');
+        const jobsModalPrice = document.getElementById('jobsModalPrice');
+        const jobsModalFeatures = document.getElementById('jobsModalFeatures');
+        const jobsConsultBtn = document.getElementById('jobsConsultBtn');
+
+        jobCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const step = card.getAttribute('data-step');
+                const title = card.getAttribute('data-title');
+                const price = card.getAttribute('data-price');
+                const image = card.getAttribute('data-image');
+                const description = card.getAttribute('data-desc');
+                const features = JSON.parse(card.getAttribute('data-features') || "[]");
+
+                jobsModalImg.src = image;
+                jobsModalStepTag.textContent = `Step ${step}`;
+                jobsModalTitle.textContent = title;
+                jobsModalDescription.textContent = description;
+                jobsModalPrice.innerHTML = `${price} <span>/ estimated budget</span>`;
+
+                jobsModalFeatures.innerHTML = features.map(item => `
+                    <li><i class="fa-solid fa-circle-check"></i> ${item}</li>
+                `).join('');
+
+                const message = `Rencey Tech Services, I would like to consult on Step ${step} - ${title} (Estimated Price: ${price}).\n\nJob Description: "${description}"`;
+                const encodedMessage = encodeURIComponent(message);
+                
+                jobsConsultBtn.href = `https://wa.me/${WHATSAPP_NUMBER_JOBS}?text=${encodedMessage}`;
+                jobsModalOverlay.classList.add('active');
+            });
+        });
+
+        jobsModalClose.addEventListener('click', () => {
+            jobsModalOverlay.classList.remove('active');
+        });
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const productModal = document.getElementById('productModal');
+            const pricingModal = document.getElementById('pricingModal');
+            if (event.target === productModal) {
+                closeProductModal();
+            }
+            if (event.target === pricingModal) {
+                closePricingModal();
+            }
+            if (event.target === jobsModalOverlay) {
+                jobsModalOverlay.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>
